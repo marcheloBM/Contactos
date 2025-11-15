@@ -23,7 +23,7 @@ public class BD {
     private Statement stmt;
     private static String myDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     
-    private static String myUrl = "jdbc:sqlserver://localhost:1433;databaseName=contactos";String user="marchelo";String clave="xxxxxx";
+    private static String myUrl = "jdbc:sqlserver://localhost:1433;databaseName=contacto;encrypt=false;";String user="marchelo";String clave="HP2117la";
     
     private Connection cnn;
     

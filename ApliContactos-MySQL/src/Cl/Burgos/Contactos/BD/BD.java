@@ -21,7 +21,7 @@ public class BD {
     public static typeData swData = typeData.swBd;
     private static BD bd;
     private Statement stmt;
-    private static String myDriver = "com.mysql.jdbc.Driver";
+    private static String myDriver = "com.mysql.cj.jdbc.Driver";
     
     private static String myUrl = "jdbc:mysql://localhost:3306/contactos";String user="root";String clave="";
     

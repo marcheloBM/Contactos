@@ -102,4 +102,19 @@ WHERE
 
 exec ProInsertarContacto 'marcelo','burgos','marchelo','990715586','0','0','0','marchelo.1989@live.cl','marchelo.bm@gmail.com'
 exec ProLeeContacto '0','10',''
+
 select * from contacto
+
+--para el usuario a conectarce en BD
+--Crear un inicio de sesión (Login)
+CREATE LOGIN marchelo
+WITH PASSWORD = 'xxxxxxxx!';
+--Crear un usuario en la base de datos
+USE contacto;
+CREATE USER marchelo
+FOR LOGIN marchelo;
+--Asignar permisos al usuario
+ALTER ROLE db_datareader ADD MEMBER marchelo;  -- Permite leer datos
+ALTER ROLE db_datawriter ADD MEMBER marchelo;  -- Permite escribir datos
+--control total sobre la base de datos
+ALTER ROLE db_owner ADD MEMBER marchelo;

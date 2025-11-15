@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
  */
 public class Log {
     public static void log(String msg){
-        String url="c:/Users/marcelo/Desktop/myfile.log";
+        String url="D:/myfile.log";
         try(PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(url, true)))) {
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
             Date date = new Date();
